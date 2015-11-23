@@ -41,6 +41,12 @@
 				<td><form:input path="password" id="password" /></td>
 				<td><form:errors path="password" cssClass="error" /></td>
 			</tr>
+			<tr>
+				<td><label for="language">Select language: </label></td>
+				<td><form:select path="language" items="${languages}">
+				
+					</form:select></td>
+			</tr>
 
 			<tr>
 				<td colspan="3"><c:choose>

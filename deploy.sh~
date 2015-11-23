@@ -1,0 +1,7 @@
+mvn clean install
+sudo $CATALINA_HOME/bin/shutdown.sh
+sudo rm -rI /usr/local/apache-tomcat-7.0.65/webapps/Language-Service
+sudo rm -rI /usr/local/apache-tomcat-7.0.65/webapps/Language-Service.war
+sudo cp target/Language-Service.war /usr/local/apache-tomcat-7.0.65/webapps/
+sudo $CATALINA_HOME/bin/startup.sh
+

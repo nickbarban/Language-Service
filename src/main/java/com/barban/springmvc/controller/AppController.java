@@ -2,9 +2,9 @@ package com.barban.springmvc.controller;
 
 import java.util.List;
 import java.util.Locale;
- 
+
 import javax.validation.Valid;
- 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
@@ -14,8 +14,11 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.barban.springmvc.model.Language;
 import com.barban.springmvc.model.User;
+import com.barban.springmvc.service.LanguageService;
 import com.barban.springmvc.service.UserService;
 
 @Controller
@@ -23,7 +26,10 @@ import com.barban.springmvc.service.UserService;
 public class AppController {
 
 	@Autowired
-	UserService service;
+	UserService userService;
+
+	@Autowired
+	LanguageService languageService;
 
 	@Autowired
 	MessageSource messageSource;
@@ -33,8 +39,7 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
 	public String listUsers(ModelMap model) {
-
-		List<User> users = service.findAllUsers();
+		List<User> users = userService.findAllUsers();
 		model.addAttribute("users", users);
 		return "allusers";
 	}
@@ -44,6 +49,8 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/new" }, method = RequestMethod.GET)
 	public String newUser(ModelMap model) {
+		List<Language> languages = languageService.findAllLanguages();
+		model.addAttribute("languages", languages);
 		User user = new User();
 		model.addAttribute("user", user);
 		model.addAttribute("edit", false);
@@ -55,8 +62,7 @@ public class AppController {
 	 * saving user in database. It also validates the user's input
 	 */
 	@RequestMapping(value = { "/new" }, method = RequestMethod.POST)
-	public String saveUser(@Valid User user, BindingResult result, ModelMap model) {
-
+	public String saveUser(@Valid User user, @RequestParam String language, BindingResult result, ModelMap model) {
 		if (result.hasErrors()) {
 			return "registration";
 		}
@@ -71,15 +77,15 @@ public class AppController {
 		 * still using internationalized messages.
 		 * 
 		 */
-		if (!service.isUserLoginUnique(user.getId(), user.getLogin())) {
+		if (!userService.isUserLoginUnique(user.getId(), user.getLogin())) {
 			FieldError loginError = new FieldError("user", "login", messageSource.getMessage("non.unique.login",
 					new String[] { user.getLogin() }, Locale.getDefault()));
 			result.addError(loginError);
 			return "registration";
 		}
 
-		service.saveUser(user);
-		
+		user.setLanguage(languageService.findLanguageByName(language));
+		userService.saveUser(user);
 
 		model.addAttribute("success", "User " + user.getName() + " registered successfully");
 		return "success";
@@ -90,7 +96,7 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/edit-{login}-user" }, method = RequestMethod.GET)
 	public String editUser(@PathVariable String login, ModelMap model) {
-		User user = service.findUserByLogin(login);
+		User user = userService.findUserByLogin(login);
 		model.addAttribute("user", user);
 		model.addAttribute("edit", true);
 		return "registration";
@@ -107,14 +113,14 @@ public class AppController {
 			return "registration";
 		}
 
-		if (!service.isUserLoginUnique(user.getId(), user.getLogin())) {
+		if (!userService.isUserLoginUnique(user.getId(), user.getLogin())) {
 			FieldError loginError = new FieldError("user", "login", messageSource.getMessage("non.unique.login",
 					new String[] { user.getLogin() }, Locale.getDefault()));
 			result.addError(loginError);
 			return "registration";
 		}
 
-		service.updateUser(user);
+		userService.updateUser(user);
 		;
 
 		model.addAttribute("success", "User " + user.getName() + " updated successfully");
@@ -126,7 +132,7 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/delete-{login}-user" }, method = RequestMethod.GET)
 	public String deleteUser(@PathVariable String login) {
-		service.deleteUserByLogin(login);
+		userService.deleteUserByLogin(login);
 		return "redirect:/list";
 	}
 

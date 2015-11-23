@@ -18,5 +18,5 @@ public interface UserService {
 
 	User findUserByLogin(String login);
 
-	boolean isUserLoginUnique(Integer id, String login2);
+	boolean isUserLoginUnique(Integer id, String login);
 }

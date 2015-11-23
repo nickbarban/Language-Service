@@ -2,14 +2,21 @@ package com.barban.springmvc.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+/**
+ * @author nick
+ *
+ */
 @Entity
 @Table(name = "user")
 public class User {
@@ -32,6 +39,10 @@ public class User {
 	@Size(min = 3, max = 20)
 	@Column(name = "password", nullable = false)
 	private String password;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "id_lang", nullable = false)
+	private Language language;
 
 	public int getId() {
 		return id;
@@ -65,6 +76,14 @@ public class User {
 		this.password = password;
 	}
 
+	public Language getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(Language language) {
+		this.language = language;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -96,6 +115,18 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", login=" + login + ", password=" + password + "]";
+	}
+
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public User(int id, String name, String login, String password, Language language) {
+		this.id = id;
+		this.name = name;
+		this.login = login;
+		this.password = password;
+		this.language = language;
 	}
 
 }
