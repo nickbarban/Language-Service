@@ -5,6 +5,5 @@ target
 .project
 .settings
 .classpath
-deploy.sh
-deploy.sh~
+deploy.*
 
