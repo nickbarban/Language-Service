@@ -21,7 +21,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class Language {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id_lang")
 	private int id;
 
@@ -93,12 +93,5 @@ public class Language {
 	public Language() {
 		// TODO Auto-generated constructor stub
 	}
-
-	public Language(int id, String name) {
-		this.id = id;
-		this.name = name;
-	}
-	
-	
 
 }

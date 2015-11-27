@@ -42,38 +42,35 @@ public class UserDaoImplTest extends EntityDaoImplTest {
 		Assert.assertEquals(userDao.findAllUsers().size(), 3);
 	}
 
-	/*
-	 * @Test public void deleteEmployeeBySsn() {
-	 * userDao.deleteUserByLogin("SAMYLOGIN");
-	 * Assert.assertEquals(userDao.findAllUsers().size(), 1); }
-	 */
+	@Test
+	public void deleteEmployeeBySsn() {
+		userDao.deleteUserByLogin("SAMYLOGIN");
+		Assert.assertEquals(userDao.findAllUsers().size(), 1);
+	}
 
-	/*
-	 * @Test public void deleteEmployeeByInvalidSsn() {
-	 * userDao.deleteUserByLogin("qwerty");
-	 * Assert.assertEquals(userDao.findAllUsers().size(), 2); }
-	 */
+	@Test
+	public void deleteEmployeeByInvalidSsn() {
+		userDao.deleteUserByLogin("qwerty");
+		Assert.assertEquals(userDao.findAllUsers().size(), 2);
+	}
 
-	/*
-	 * @Test public void findAllEmployees() {
-	 * Assert.assertEquals(userDao.findAllUsers().size(), 2); }
-	 */
+	@Test
+	public void findAllEmployees() {
+		Assert.assertEquals(userDao.findAllUsers().size(), 2);
+	}
 
-	/*
-	 * @Test public void findEmployeeBySsn() {
-	 * Assert.assertNotNull(userDao.findUserByLogin("SAMYLOGIN"));
-	 * Assert.assertNull(userDao.findUserByLogin("qwerty")); }
-	 */
+	@Test
+	public void findEmployeeBySsn() {
+		Assert.assertNotNull(userDao.findUserByLogin("SAMYLOGIN"));
+		Assert.assertNull(userDao.findUserByLogin("qwerty"));
+	}
 
 	public User getSampleUser() {
 		User user = new User();
-		user.setId(3);
 		user.setName("Karen");
 		user.setLogin("KarenLogin");
 		user.setPassword("3333");
-		Language language = new Language(10, "turkish");
-		language.getUsers().add(user);
-		user.setLanguage(language);
+		user.setLanguage(languageDao.findById(1));
 		return user;
 	}
 
