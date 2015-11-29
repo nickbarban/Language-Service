@@ -20,6 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan({ "com.barban.springmvc.dao" })
 public class HibernateTestConfiguration {
 
+	@SuppressWarnings("unused")
 	@Autowired
 	private Environment environment;
 

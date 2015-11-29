@@ -2,19 +2,18 @@ package com.barban.springmvc.dao;
 
 import org.dbunit.dataset.CompositeDataSet;
 import org.dbunit.dataset.IDataSet;
-
-import com.barban.springmvc.dao.EntityDaoImplTest;
-import com.barban.springmvc.dao.LanguageDao;
-import com.barban.springmvc.dao.UserDao;
-import com.barban.springmvc.model.Language;
-import com.barban.springmvc.model.User;
-
 import org.dbunit.dataset.xml.FlatXmlDataSet;
 import org.junit.Assert;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.barban.springmvc.model.User;
+
 public class UserDaoImplTest extends EntityDaoImplTest {
+
+	public static final Logger LOG = LoggerFactory.getLogger(UserDaoImplTest.class);
 
 	@Autowired
 	UserDao userDao;
@@ -24,6 +23,7 @@ public class UserDaoImplTest extends EntityDaoImplTest {
 
 	@Override
 	protected IDataSet getDataSet() throws Exception {
+		LOG.info("Set up for logging");
 		IDataSet[] datasets = {
 				new FlatXmlDataSet(this.getClass().getClassLoader().getResourceAsStream("Language.xml")),
 				new FlatXmlDataSet(this.getClass().getClassLoader().getResourceAsStream("User.xml")) };

@@ -1,0 +1,941 @@
+18:11:25,141  INFO DefaultTestContextBootstrapper:185 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3a5ed7a6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6325a3ee, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1d16f93d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67b92f0a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2b9627bc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@65e2dbf3]
+18:11:25,377  INFO GenericApplicationContext:574 - Refreshing org.springframework.context.support.GenericApplicationContext@528931cf: startup date [Sun Nov 29 18:11:25 EET 2015]; root of context hierarchy
+18:11:26,181  INFO DriverManagerDataSource:133 - Loaded JDBC driver: org.h2.Driver
+18:11:26,337 DEBUG BasicTypeRegistry:146 - Adding type registration boolean -> org.hibernate.type.BooleanType@47e2e487
+18:11:26,338 DEBUG BasicTypeRegistry:146 - Adding type registration boolean -> org.hibernate.type.BooleanType@47e2e487
+18:11:26,338 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@47e2e487
+18:11:26,340 DEBUG BasicTypeRegistry:146 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@26e356f0
+18:11:26,342 DEBUG BasicTypeRegistry:146 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@4659191b
+18:11:26,343 DEBUG BasicTypeRegistry:146 - Adding type registration yes_no -> org.hibernate.type.YesNoType@4c1909a3
+18:11:26,347 DEBUG BasicTypeRegistry:146 - Adding type registration byte -> org.hibernate.type.ByteType@6bd61f98
+18:11:26,347 DEBUG BasicTypeRegistry:146 - Adding type registration byte -> org.hibernate.type.ByteType@6bd61f98
+18:11:26,348 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@6bd61f98
+18:11:26,353 DEBUG BasicTypeRegistry:146 - Adding type registration character -> org.hibernate.type.CharacterType@7d4f9aae
+18:11:26,354 DEBUG BasicTypeRegistry:146 - Adding type registration char -> org.hibernate.type.CharacterType@7d4f9aae
+18:11:26,354 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@7d4f9aae
+18:11:26,360 DEBUG BasicTypeRegistry:146 - Adding type registration short -> org.hibernate.type.ShortType@783a467b
+18:11:26,365 DEBUG BasicTypeRegistry:146 - Adding type registration short -> org.hibernate.type.ShortType@783a467b
+18:11:26,365 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@783a467b
+18:11:26,367 DEBUG BasicTypeRegistry:146 - Adding type registration integer -> org.hibernate.type.IntegerType@1ed6388a
+18:11:26,368 DEBUG BasicTypeRegistry:146 - Adding type registration int -> org.hibernate.type.IntegerType@1ed6388a
+18:11:26,368 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@1ed6388a
+18:11:26,373 DEBUG BasicTypeRegistry:146 - Adding type registration long -> org.hibernate.type.LongType@5e600dd5
+18:11:26,374 DEBUG BasicTypeRegistry:146 - Adding type registration long -> org.hibernate.type.LongType@5e600dd5
+18:11:26,380 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@5e600dd5
+18:11:26,383 DEBUG BasicTypeRegistry:146 - Adding type registration float -> org.hibernate.type.FloatType@2e6a8155
+18:11:26,383 DEBUG BasicTypeRegistry:146 - Adding type registration float -> org.hibernate.type.FloatType@2e6a8155
+18:11:26,386 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@2e6a8155
+18:11:26,388 DEBUG BasicTypeRegistry:146 - Adding type registration double -> org.hibernate.type.DoubleType@5824a83d
+18:11:26,389 DEBUG BasicTypeRegistry:146 - Adding type registration double -> org.hibernate.type.DoubleType@5824a83d
+18:11:26,390 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@5824a83d
+18:11:26,394 DEBUG BasicTypeRegistry:146 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@38cee291
+18:11:26,394 DEBUG BasicTypeRegistry:146 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@38cee291
+18:11:26,397 DEBUG BasicTypeRegistry:146 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@6340e5f0
+18:11:26,398 DEBUG BasicTypeRegistry:146 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@6340e5f0
+18:11:26,400 DEBUG BasicTypeRegistry:146 - Adding type registration string -> org.hibernate.type.StringType@6c1a5b54
+18:11:26,401 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.String -> org.hibernate.type.StringType@6c1a5b54
+18:11:26,405 DEBUG BasicTypeRegistry:146 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@368247b9
+18:11:26,407 DEBUG BasicTypeRegistry:146 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@738dc9b
+18:11:26,409 DEBUG BasicTypeRegistry:146 - Adding type registration url -> org.hibernate.type.UrlType@2892d68
+18:11:26,411 DEBUG BasicTypeRegistry:146 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@2892d68
+18:11:26,414 DEBUG BasicTypeRegistry:146 - Adding type registration date -> org.hibernate.type.DateType@f0c8a99
+18:11:26,414 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@f0c8a99
+18:11:26,417 DEBUG BasicTypeRegistry:146 - Adding type registration time -> org.hibernate.type.TimeType@54c5a2ff
+18:11:26,417 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@54c5a2ff
+18:11:26,420 DEBUG BasicTypeRegistry:146 - Adding type registration timestamp -> org.hibernate.type.TimestampType@2e8c1c9b
+18:11:26,420 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@2e8c1c9b
+18:11:26,421 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@2e8c1c9b
+18:11:26,424 DEBUG BasicTypeRegistry:146 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1530c739
+18:11:26,427 DEBUG BasicTypeRegistry:146 - Adding type registration calendar -> org.hibernate.type.CalendarType@15bb5034
+18:11:26,427 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@15bb5034
+18:11:26,428 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@15bb5034
+18:11:26,430 DEBUG BasicTypeRegistry:146 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@8f2ef19
+18:11:26,433 DEBUG BasicTypeRegistry:146 - Adding type registration locale -> org.hibernate.type.LocaleType@173ed316
+18:11:26,434 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@173ed316
+18:11:26,437 DEBUG BasicTypeRegistry:146 - Adding type registration currency -> org.hibernate.type.CurrencyType@27406a17
+18:11:26,437 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@27406a17
+18:11:26,439 DEBUG BasicTypeRegistry:146 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@3e8c3cb
+18:11:26,440 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@3e8c3cb
+18:11:26,445 DEBUG BasicTypeRegistry:146 - Adding type registration class -> org.hibernate.type.ClassType@3e27ba32
+18:11:26,445 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@3e27ba32
+18:11:26,448 DEBUG BasicTypeRegistry:146 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@74d1dc36
+18:11:26,448 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@74d1dc36
+18:11:26,449 DEBUG BasicTypeRegistry:146 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@1cf6d1be
+18:11:26,451 DEBUG BasicTypeRegistry:146 - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@5149d738
+18:11:26,455 DEBUG BasicTypeRegistry:146 - Adding type registration binary -> org.hibernate.type.BinaryType@4b013c76
+18:11:26,456 DEBUG BasicTypeRegistry:146 - Adding type registration byte[] -> org.hibernate.type.BinaryType@4b013c76
+18:11:26,457 DEBUG BasicTypeRegistry:146 - Adding type registration [B -> org.hibernate.type.BinaryType@4b013c76
+18:11:26,459 DEBUG BasicTypeRegistry:146 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@742ff096
+18:11:26,460 DEBUG BasicTypeRegistry:146 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@742ff096
+18:11:26,461 DEBUG BasicTypeRegistry:146 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@742ff096
+18:11:26,462 DEBUG BasicTypeRegistry:146 - Adding type registration image -> org.hibernate.type.ImageType@79e4c792
+18:11:26,464 DEBUG BasicTypeRegistry:146 - Adding type registration characters -> org.hibernate.type.CharArrayType@1349883
+18:11:26,465 DEBUG BasicTypeRegistry:146 - Adding type registration char[] -> org.hibernate.type.CharArrayType@1349883
+18:11:26,465 DEBUG BasicTypeRegistry:146 - Adding type registration [C -> org.hibernate.type.CharArrayType@1349883
+18:11:26,467 DEBUG BasicTypeRegistry:146 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@35dab4eb
+18:11:26,468 DEBUG BasicTypeRegistry:146 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@35dab4eb
+18:11:26,468 DEBUG BasicTypeRegistry:146 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@35dab4eb
+18:11:26,470 DEBUG BasicTypeRegistry:146 - Adding type registration text -> org.hibernate.type.TextType@72cc7e6f
+18:11:26,472 DEBUG BasicTypeRegistry:146 - Adding type registration ntext -> org.hibernate.type.NTextType@606e4010
+18:11:26,478 DEBUG BasicTypeRegistry:146 - Adding type registration blob -> org.hibernate.type.BlobType@cecf639
+18:11:26,479 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@cecf639
+18:11:26,480 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@7ce69770
+18:11:26,486 DEBUG BasicTypeRegistry:146 - Adding type registration clob -> org.hibernate.type.ClobType@6be968ce
+18:11:26,492 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@6be968ce
+18:11:26,497 DEBUG BasicTypeRegistry:146 - Adding type registration nclob -> org.hibernate.type.NClobType@7ae0a9ec
+18:11:26,498 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@7ae0a9ec
+18:11:26,501 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@6f10d5b6
+18:11:26,504 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@433defed
+18:11:26,506 DEBUG BasicTypeRegistry:146 - Adding type registration serializable -> org.hibernate.type.SerializableType@304bb45b
+18:11:26,510 DEBUG BasicTypeRegistry:146 - Adding type registration object -> org.hibernate.type.ObjectType@66982506
+18:11:26,512 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@66982506
+18:11:26,514 DEBUG BasicTypeRegistry:146 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@4bdeaabb
+18:11:26,515 DEBUG BasicTypeRegistry:146 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@6c4906d3
+18:11:26,515 DEBUG BasicTypeRegistry:146 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@65987993
+18:11:26,515 DEBUG BasicTypeRegistry:146 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@71075444
+18:11:26,516 DEBUG BasicTypeRegistry:146 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@4f32a3ad
+18:11:26,516 DEBUG BasicTypeRegistry:146 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@6b695b06
+18:11:26,518 DEBUG BasicTypeRegistry:146 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@4d1bf319
+18:11:26,519 DEBUG BasicTypeRegistry:146 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@6f53b8a
+18:11:26,547  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+18:11:26,567  INFO Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+18:11:26,583  INFO Environment:239 - HHH000206: hibernate.properties not found
+18:11:26,589  INFO Environment:346 - HHH000021: Bytecode provider name : javassist
+18:11:27,137  INFO Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+18:11:27,746  INFO TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+18:11:27,753  INFO ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+18:11:27,813 TRACE TypeFactory:72 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@77602954
+18:11:27,856  INFO Version:27 - HV000001: Hibernate Validator 5.1.3.Final
+18:11:28,433  INFO SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+18:11:28,440 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user drop constraint FK_ef8art7q4ni4ot5mrlc5ljwjj if exists
+18:11:28,441 ERROR SchemaExport:426 - Table "USER" not found; SQL statement:
+alter table user drop constraint FK_ef8art7q4ni4ot5mrlc5ljwjj if exists [42102-187]
+18:11:28,511  INFO SchemaExport:405 - HHH000230: Schema export complete
+18:11:28,616  INFO HibernateTransactionManager:360 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@ceb4bd2] of Hibernate SessionFactory for HibernateTransactionManager
+18:11:28,697  INFO CglibAopProxy:264 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will NOT be routed to the target instance.
+18:11:28,866  INFO TransactionContext:101 - Began transaction (1) for test context [DefaultTestContext@49b07ee3 testClass = UserDaoImplTest, testInstance = com.barban.springmvc.dao.UserDaoImplTest@352e612e, testMethod = saveUser@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6034e75d testClass = UserDaoImplTest, locations = '{}', classes = '{class com.barban.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@65f00478]; rollback [true]
+18:11:28,919  INFO UserDaoImplTest:26 - Set up for logging
+18:11:29,251 TRACE BasicBinder:81 - binding parameter [1] as [INTEGER] - [1]
+18:11:29,262 TRACE BasicExtractor:78 - extracted value ([id1_1_2_] : [INTEGER]) - [1]
+18:11:29,273 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_0_] : [VARCHAR]) - [english]
+18:11:29,276 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_2_] : [INTEGER]) - [1]
+18:11:29,277 TRACE BasicExtractor:78 - extracted value ([login2_1_2_] : [VARCHAR]) - [SAMYLOGIN]
+18:11:29,278 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_2_] : [VARCHAR]) - [SAMY]
+18:11:29,278 TRACE BasicExtractor:78 - extracted value ([password4_1_2_] : [VARCHAR]) - [1111]
+18:11:29,279 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_1_] : [INTEGER]) - [1]
+18:11:29,291 TRACE BasicExtractor:78 - extracted value ([id1_1_1_] : [INTEGER]) - [1]
+18:11:29,293 TRACE BasicExtractor:78 - extracted value ([id1_1_2_] : [INTEGER]) - [2]
+18:11:29,294 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_2_] : [INTEGER]) - [1]
+18:11:29,295 TRACE BasicExtractor:78 - extracted value ([login2_1_2_] : [VARCHAR]) - [TOMYLOGIN]
+18:11:29,297 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_2_] : [VARCHAR]) - [TOMY]
+18:11:29,298 TRACE BasicExtractor:78 - extracted value ([password4_1_2_] : [VARCHAR]) - [2222]
+18:11:29,299 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_1_] : [INTEGER]) - [1]
+18:11:29,300 TRACE BasicExtractor:78 - extracted value ([id1_1_1_] : [INTEGER]) - [2]
+18:11:29,340 TRACE BasicBinder:81 - binding parameter [1] as [INTEGER] - [1]
+18:11:29,341 TRACE BasicBinder:81 - binding parameter [2] as [VARCHAR] - [KarenLogin]
+18:11:29,345 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Karen]
+18:11:29,346 TRACE BasicBinder:81 - binding parameter [4] as [VARCHAR] - [3333]
+18:11:29,394 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [1]
+18:11:29,398 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [2]
+18:11:29,399 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [3]
+18:11:29,415  INFO TransactionContext:136 - Rolled back transaction for test context [DefaultTestContext@49b07ee3 testClass = UserDaoImplTest, testInstance = com.barban.springmvc.dao.UserDaoImplTest@352e612e, testMethod = saveUser@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6034e75d testClass = UserDaoImplTest, locations = '{}', classes = '{class com.barban.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+18:11:29,432  INFO TransactionContext:101 - Began transaction (1) for test context [DefaultTestContext@49b07ee3 testClass = UserDaoImplTest, testInstance = com.barban.springmvc.dao.UserDaoImplTest@27c04377, testMethod = findById@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6034e75d testClass = UserDaoImplTest, locations = '{}', classes = '{class com.barban.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@65f00478]; rollback [true]
+18:11:29,432  INFO UserDaoImplTest:26 - Set up for logging
+18:11:29,479 TRACE BasicBinder:81 - binding parameter [1] as [INTEGER] - [1]
+18:11:29,486 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:11:29,487 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [SAMYLOGIN]
+18:11:29,488 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [SAMY]
+18:11:29,488 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [1111]
+18:11:29,497 TRACE BasicBinder:81 - binding parameter [1] as [INTEGER] - [3]
+18:11:29,499  INFO TransactionContext:136 - Rolled back transaction for test context [DefaultTestContext@49b07ee3 testClass = UserDaoImplTest, testInstance = com.barban.springmvc.dao.UserDaoImplTest@27c04377, testMethod = findById@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6034e75d testClass = UserDaoImplTest, locations = '{}', classes = '{class com.barban.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+18:11:29,513  INFO TransactionContext:101 - Began transaction (1) for test context [DefaultTestContext@49b07ee3 testClass = UserDaoImplTest, testInstance = com.barban.springmvc.dao.UserDaoImplTest@723ed581, testMethod = findAllEmployees@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6034e75d testClass = UserDaoImplTest, locations = '{}', classes = '{class com.barban.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@65f00478]; rollback [true]
+18:11:29,516  INFO UserDaoImplTest:26 - Set up for logging
+18:11:29,558 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [1]
+18:11:29,563 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:11:29,564 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [SAMYLOGIN]
+18:11:29,565 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [SAMY]
+18:11:29,569 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [1111]
+18:11:29,570 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [2]
+18:11:29,571 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:11:29,571 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [TOMYLOGIN]
+18:11:29,571 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [TOMY]
+18:11:29,572 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [2222]
+18:11:29,575  INFO TransactionContext:136 - Rolled back transaction for test context [DefaultTestContext@49b07ee3 testClass = UserDaoImplTest, testInstance = com.barban.springmvc.dao.UserDaoImplTest@723ed581, testMethod = findAllEmployees@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6034e75d testClass = UserDaoImplTest, locations = '{}', classes = '{class com.barban.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+18:11:29,585  INFO TransactionContext:101 - Began transaction (1) for test context [DefaultTestContext@49b07ee3 testClass = UserDaoImplTest, testInstance = com.barban.springmvc.dao.UserDaoImplTest@3ac04654, testMethod = findEmployeeBySsn@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6034e75d testClass = UserDaoImplTest, locations = '{}', classes = '{class com.barban.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@65f00478]; rollback [true]
+18:11:29,588  INFO UserDaoImplTest:26 - Set up for logging
+18:11:29,653 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [SAMYLOGIN]
+18:11:29,654 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [1]
+18:11:29,655 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:11:29,655 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [SAMYLOGIN]
+18:11:29,656 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [SAMY]
+18:11:29,657 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [1111]
+18:11:29,687 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [qwerty]
+18:11:29,690  INFO TransactionContext:136 - Rolled back transaction for test context [DefaultTestContext@49b07ee3 testClass = UserDaoImplTest, testInstance = com.barban.springmvc.dao.UserDaoImplTest@3ac04654, testMethod = findEmployeeBySsn@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6034e75d testClass = UserDaoImplTest, locations = '{}', classes = '{class com.barban.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+18:11:29,719  INFO TransactionContext:101 - Began transaction (1) for test context [DefaultTestContext@49b07ee3 testClass = UserDaoImplTest, testInstance = com.barban.springmvc.dao.UserDaoImplTest@56f71edb, testMethod = deleteEmployeeByInvalidSsn@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6034e75d testClass = UserDaoImplTest, locations = '{}', classes = '{class com.barban.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@65f00478]; rollback [true]
+18:11:29,720  INFO UserDaoImplTest:26 - Set up for logging
+18:11:29,783 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [qwerty]
+18:11:29,785 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [1]
+18:11:29,786 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:11:29,786 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [SAMYLOGIN]
+18:11:29,787 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [SAMY]
+18:11:29,787 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [1111]
+18:11:29,803 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [2]
+18:11:29,806 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:11:29,806 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [TOMYLOGIN]
+18:11:29,807 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [TOMY]
+18:11:29,807 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [2222]
+18:11:29,809  INFO TransactionContext:136 - Rolled back transaction for test context [DefaultTestContext@49b07ee3 testClass = UserDaoImplTest, testInstance = com.barban.springmvc.dao.UserDaoImplTest@56f71edb, testMethod = deleteEmployeeByInvalidSsn@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6034e75d testClass = UserDaoImplTest, locations = '{}', classes = '{class com.barban.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+18:11:29,836  INFO TransactionContext:101 - Began transaction (1) for test context [DefaultTestContext@49b07ee3 testClass = UserDaoImplTest, testInstance = com.barban.springmvc.dao.UserDaoImplTest@57d0fc89, testMethod = deleteEmployeeBySsn@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6034e75d testClass = UserDaoImplTest, locations = '{}', classes = '{class com.barban.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@65f00478]; rollback [true]
+18:11:29,837  INFO UserDaoImplTest:26 - Set up for logging
+18:11:29,854 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [SAMYLOGIN]
+18:11:29,857 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [2]
+18:11:29,860 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:11:29,860 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [TOMYLOGIN]
+18:11:29,861 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [TOMY]
+18:11:29,877 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [2222]
+18:11:29,883  INFO TransactionContext:136 - Rolled back transaction for test context [DefaultTestContext@49b07ee3 testClass = UserDaoImplTest, testInstance = com.barban.springmvc.dao.UserDaoImplTest@57d0fc89, testMethod = deleteEmployeeBySsn@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6034e75d testClass = UserDaoImplTest, locations = '{}', classes = '{class com.barban.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+18:11:29,919  INFO GenericApplicationContext:954 - Closing org.springframework.context.support.GenericApplicationContext@528931cf: startup date [Sun Nov 29 18:11:25 EET 2015]; root of context hierarchy
+18:11:29,950  INFO SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+18:11:29,974  INFO SchemaExport:405 - HHH000230: Schema export complete
+18:11:45,061  INFO DispatcherServlet:488 - FrameworkServlet 'dispatcher': initialization started
+18:11:45,075  INFO AnnotationConfigWebApplicationContext:574 - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sun Nov 29 18:11:45 EET 2015]; root of context hierarchy
+18:11:45,151  INFO AnnotationConfigWebApplicationContext:208 - Registering annotated classes: [class com.barban.springmvc.configuration.AppConfig]
+18:11:46,388  INFO DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+18:11:46,507 DEBUG BasicTypeRegistry:146 - Adding type registration boolean -> org.hibernate.type.BooleanType@937240f
+18:11:46,508 DEBUG BasicTypeRegistry:146 - Adding type registration boolean -> org.hibernate.type.BooleanType@937240f
+18:11:46,509 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@937240f
+18:11:46,511 DEBUG BasicTypeRegistry:146 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@4d287531
+18:11:46,513 DEBUG BasicTypeRegistry:146 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@431dbc59
+18:11:46,517 DEBUG BasicTypeRegistry:146 - Adding type registration yes_no -> org.hibernate.type.YesNoType@240f9650
+18:11:46,521 DEBUG BasicTypeRegistry:146 - Adding type registration byte -> org.hibernate.type.ByteType@7c691f65
+18:11:46,522 DEBUG BasicTypeRegistry:146 - Adding type registration byte -> org.hibernate.type.ByteType@7c691f65
+18:11:46,523 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@7c691f65
+18:11:46,524 DEBUG BasicTypeRegistry:146 - Adding type registration character -> org.hibernate.type.CharacterType@4c71240a
+18:11:46,531 DEBUG BasicTypeRegistry:146 - Adding type registration char -> org.hibernate.type.CharacterType@4c71240a
+18:11:46,531 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4c71240a
+18:11:46,540 DEBUG BasicTypeRegistry:146 - Adding type registration short -> org.hibernate.type.ShortType@7e81adf4
+18:11:46,541 DEBUG BasicTypeRegistry:146 - Adding type registration short -> org.hibernate.type.ShortType@7e81adf4
+18:11:46,541 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7e81adf4
+18:11:46,543 DEBUG BasicTypeRegistry:146 - Adding type registration integer -> org.hibernate.type.IntegerType@713e857e
+18:11:46,543 DEBUG BasicTypeRegistry:146 - Adding type registration int -> org.hibernate.type.IntegerType@713e857e
+18:11:46,543 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@713e857e
+18:11:46,547 DEBUG BasicTypeRegistry:146 - Adding type registration long -> org.hibernate.type.LongType@4a82be2a
+18:11:46,548 DEBUG BasicTypeRegistry:146 - Adding type registration long -> org.hibernate.type.LongType@4a82be2a
+18:11:46,548 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@4a82be2a
+18:11:46,550 DEBUG BasicTypeRegistry:146 - Adding type registration float -> org.hibernate.type.FloatType@f4321bb
+18:11:46,552 DEBUG BasicTypeRegistry:146 - Adding type registration float -> org.hibernate.type.FloatType@f4321bb
+18:11:46,553 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@f4321bb
+18:11:46,555 DEBUG BasicTypeRegistry:146 - Adding type registration double -> org.hibernate.type.DoubleType@e5b01d8
+18:11:46,555 DEBUG BasicTypeRegistry:146 - Adding type registration double -> org.hibernate.type.DoubleType@e5b01d8
+18:11:46,556 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@e5b01d8
+18:11:46,558 DEBUG BasicTypeRegistry:146 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@33001b27
+18:11:46,559 DEBUG BasicTypeRegistry:146 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@33001b27
+18:11:46,561 DEBUG BasicTypeRegistry:146 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@3375ee38
+18:11:46,562 DEBUG BasicTypeRegistry:146 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@3375ee38
+18:11:46,563 DEBUG BasicTypeRegistry:146 - Adding type registration string -> org.hibernate.type.StringType@31ffe654
+18:11:46,564 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.String -> org.hibernate.type.StringType@31ffe654
+18:11:46,565 DEBUG BasicTypeRegistry:146 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@510f66ab
+18:11:46,567 DEBUG BasicTypeRegistry:146 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@22d2360c
+18:11:46,569 DEBUG BasicTypeRegistry:146 - Adding type registration url -> org.hibernate.type.UrlType@4b1d2bef
+18:11:46,570 DEBUG BasicTypeRegistry:146 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@4b1d2bef
+18:11:46,573 DEBUG BasicTypeRegistry:146 - Adding type registration date -> org.hibernate.type.DateType@5aa55c29
+18:11:46,573 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5aa55c29
+18:11:46,577 DEBUG BasicTypeRegistry:146 - Adding type registration time -> org.hibernate.type.TimeType@38412d04
+18:11:46,577 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@38412d04
+18:11:46,580 DEBUG BasicTypeRegistry:146 - Adding type registration timestamp -> org.hibernate.type.TimestampType@14cf5918
+18:11:46,580 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@14cf5918
+18:11:46,583 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@14cf5918
+18:11:46,587 DEBUG BasicTypeRegistry:146 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@186cd493
+18:11:46,589 DEBUG BasicTypeRegistry:146 - Adding type registration calendar -> org.hibernate.type.CalendarType@7385452e
+18:11:46,589 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@7385452e
+18:11:46,590 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@7385452e
+18:11:46,592 DEBUG BasicTypeRegistry:146 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@29a6a470
+18:11:46,594 DEBUG BasicTypeRegistry:146 - Adding type registration locale -> org.hibernate.type.LocaleType@73b6c83e
+18:11:46,594 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@73b6c83e
+18:11:46,597 DEBUG BasicTypeRegistry:146 - Adding type registration currency -> org.hibernate.type.CurrencyType@30151116
+18:11:46,598 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@30151116
+18:11:46,599 DEBUG BasicTypeRegistry:146 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@76f9f441
+18:11:46,601 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@76f9f441
+18:11:46,602 DEBUG BasicTypeRegistry:146 - Adding type registration class -> org.hibernate.type.ClassType@377d9a07
+18:11:46,612 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@377d9a07
+18:11:46,617 DEBUG BasicTypeRegistry:146 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@80bb0a5
+18:11:46,622 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@80bb0a5
+18:11:46,623 DEBUG BasicTypeRegistry:146 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@31c23334
+18:11:46,634 DEBUG BasicTypeRegistry:146 - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@5990a724
+18:11:46,637 DEBUG BasicTypeRegistry:146 - Adding type registration binary -> org.hibernate.type.BinaryType@537d665c
+18:11:46,638 DEBUG BasicTypeRegistry:146 - Adding type registration byte[] -> org.hibernate.type.BinaryType@537d665c
+18:11:46,638 DEBUG BasicTypeRegistry:146 - Adding type registration [B -> org.hibernate.type.BinaryType@537d665c
+18:11:46,640 DEBUG BasicTypeRegistry:146 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@65bbc408
+18:11:46,641 DEBUG BasicTypeRegistry:146 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@65bbc408
+18:11:46,641 DEBUG BasicTypeRegistry:146 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@65bbc408
+18:11:46,643 DEBUG BasicTypeRegistry:146 - Adding type registration image -> org.hibernate.type.ImageType@307ae734
+18:11:46,645 DEBUG BasicTypeRegistry:146 - Adding type registration characters -> org.hibernate.type.CharArrayType@6fb86bd5
+18:11:46,646 DEBUG BasicTypeRegistry:146 - Adding type registration char[] -> org.hibernate.type.CharArrayType@6fb86bd5
+18:11:46,646 DEBUG BasicTypeRegistry:146 - Adding type registration [C -> org.hibernate.type.CharArrayType@6fb86bd5
+18:11:46,648 DEBUG BasicTypeRegistry:146 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@6767d911
+18:11:46,648 DEBUG BasicTypeRegistry:146 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@6767d911
+18:11:46,649 DEBUG BasicTypeRegistry:146 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@6767d911
+18:11:46,651 DEBUG BasicTypeRegistry:146 - Adding type registration text -> org.hibernate.type.TextType@2e5f3107
+18:11:46,654 DEBUG BasicTypeRegistry:146 - Adding type registration ntext -> org.hibernate.type.NTextType@35b3f834
+18:11:46,660 DEBUG BasicTypeRegistry:146 - Adding type registration blob -> org.hibernate.type.BlobType@6e13b0a9
+18:11:46,661 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@6e13b0a9
+18:11:46,662 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@79707ff7
+18:11:46,668 DEBUG BasicTypeRegistry:146 - Adding type registration clob -> org.hibernate.type.ClobType@6b40e490
+18:11:46,670 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@6b40e490
+18:11:46,678 DEBUG BasicTypeRegistry:146 - Adding type registration nclob -> org.hibernate.type.NClobType@1c4ef5f5
+18:11:46,680 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@1c4ef5f5
+18:11:46,681 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@24c5a77f
+18:11:46,683 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@40929994
+18:11:46,685 DEBUG BasicTypeRegistry:146 - Adding type registration serializable -> org.hibernate.type.SerializableType@4b089444
+18:11:46,689 DEBUG BasicTypeRegistry:146 - Adding type registration object -> org.hibernate.type.ObjectType@56b7c463
+18:11:46,690 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@56b7c463
+18:11:46,691 DEBUG BasicTypeRegistry:146 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@24d93eda
+18:11:46,691 DEBUG BasicTypeRegistry:146 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@4ca572fe
+18:11:46,692 DEBUG BasicTypeRegistry:146 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@42f2d47d
+18:11:46,692 DEBUG BasicTypeRegistry:146 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@2827b8f1
+18:11:46,692 DEBUG BasicTypeRegistry:146 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@45e56cc1
+18:11:46,693 DEBUG BasicTypeRegistry:146 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@2230d401
+18:11:46,693 DEBUG BasicTypeRegistry:146 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@76b5ad06
+18:11:46,693 DEBUG BasicTypeRegistry:146 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@63c07311
+18:11:46,719  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+18:11:46,731  INFO Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+18:11:46,737  INFO Environment:239 - HHH000206: hibernate.properties not found
+18:11:46,741  INFO Environment:346 - HHH000021: Bytecode provider name : javassist
+18:11:48,076  INFO Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+18:11:48,386  INFO TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+18:11:48,393  INFO ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+18:11:48,424 TRACE TypeFactory:72 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@12463524
+18:11:48,474  INFO Version:27 - HV000001: Hibernate Validator 5.1.3.Final
+18:11:49,828  INFO HibernateTransactionManager:360 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@54a9e5b0] of Hibernate SessionFactory for HibernateTransactionManager
+18:11:51,542  INFO RequestMappingHandlerMapping:531 - Mapped "{[/ || /list],methods=[GET]}" onto public java.lang.String com.barban.springmvc.controller.AppController.listUsers(org.springframework.ui.ModelMap)
+18:11:51,544  INFO RequestMappingHandlerMapping:531 - Mapped "{[/new],methods=[GET]}" onto public java.lang.String com.barban.springmvc.controller.AppController.newUser(org.springframework.ui.ModelMap)
+18:11:51,545  INFO RequestMappingHandlerMapping:531 - Mapped "{[/new],methods=[POST]}" onto public java.lang.String com.barban.springmvc.controller.AppController.saveUser(com.barban.springmvc.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+18:11:51,545  INFO RequestMappingHandlerMapping:531 - Mapped "{[/edit-{login}-user],methods=[GET]}" onto public java.lang.String com.barban.springmvc.controller.AppController.editUser(java.lang.String,org.springframework.ui.ModelMap)
+18:11:51,546  INFO RequestMappingHandlerMapping:531 - Mapped "{[/edit-{login}-user],methods=[POST]}" onto public java.lang.String com.barban.springmvc.controller.AppController.updateUser(com.barban.springmvc.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,java.lang.String)
+18:11:51,547  INFO RequestMappingHandlerMapping:531 - Mapped "{[/delete-{login}-user],methods=[GET]}" onto public java.lang.String com.barban.springmvc.controller.AppController.deleteUser(java.lang.String)
+18:11:51,810  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sun Nov 29 18:11:45 EET 2015]; root of context hierarchy
+18:11:52,081  INFO DispatcherServlet:507 - FrameworkServlet 'dispatcher': initialization completed in 7016 ms
+18:12:09,149 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [1]
+18:12:09,162 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:12:09,163 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [brabus]
+18:12:09,163 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Nick]
+18:12:09,164 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [30091982]
+18:12:09,166 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [2]
+18:12:09,167 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:12:09,168 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [kiss]
+18:12:09,169 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Cate]
+18:12:09,170 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [30031981]
+18:12:09,175 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [3]
+18:12:09,176 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:12:09,176 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [gosha]
+18:12:09,176 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Igor]
+18:12:09,177 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [27012001]
+18:12:09,177 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [4]
+18:12:09,177 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:12:09,180 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [masyanya]
+18:12:09,182 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Masha]
+18:12:09,182 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [1111]
+18:12:09,183 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [5]
+18:12:09,183 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [5]
+18:12:09,184 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [gorbach]
+18:12:09,184 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Misha]
+18:12:09,185 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [2222]
+18:12:09,186 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [6]
+18:12:09,186 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [4]
+18:12:09,186 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [hryts]
+18:12:09,187 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Anton]
+18:12:09,187 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [4444]
+18:12:09,227  INFO AppController:62 - list of users: 6
+18:12:15,120 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [hryts]
+18:12:15,122 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [6]
+18:12:15,123 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [4]
+18:12:15,124 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [hryts]
+18:12:15,124 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Anton]
+18:12:15,124 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [4444]
+18:12:15,609 ERROR SelectTag:87 - could not initialize proxy - no Session
+org.hibernate.LazyInitializationException: could not initialize proxy - no Session
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:165)
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:286)
+	at org.hibernate.proxy.pojo.javassist.JavassistLazyInitializer.invoke(JavassistLazyInitializer.java:185)
+	at com.barban.springmvc.model.Language_$$_jvst975_0.toString(Language_$$_jvst975_0.java)
+	at java.beans.PropertyEditorSupport.getAsText(PropertyEditorSupport.java:166)
+	at org.springframework.validation.AbstractPropertyBindingResult.formatFieldValue(AbstractPropertyBindingResult.java:113)
+	at org.springframework.validation.AbstractBindingResult.getFieldValue(AbstractBindingResult.java:232)
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:120)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getBindStatus(AbstractDataBoundFormElementTag.java:168)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getPropertyPath(AbstractDataBoundFormElementTag.java:188)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getName(AbstractDataBoundFormElementTag.java:154)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.autogenerateId(AbstractDataBoundFormElementTag.java:141)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.resolveId(AbstractDataBoundFormElementTag.java:132)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.writeDefaultAttributes(AbstractDataBoundFormElementTag.java:116)
+	at org.springframework.web.servlet.tags.form.AbstractHtmlElementTag.writeDefaultAttributes(AbstractHtmlElementTag.java:422)
+	at org.springframework.web.servlet.tags.form.SelectTag.writeTagContent(SelectTag.java:194)
+	at org.springframework.web.servlet.tags.form.AbstractFormTag.doStartTagInternal(AbstractFormTag.java:84)
+	at org.springframework.web.servlet.tags.RequestContextAwareTag.doStartTag(RequestContextAwareTag.java:80)
+	at org.apache.jsp.WEB_002dINF.views.registration_jsp._jspx_meth_form_005fselect_005f0(registration_jsp.java:441)
+	at org.apache.jsp.WEB_002dINF.views.registration_jsp._jspService(registration_jsp.java:254)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:439)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:395)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:339)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:748)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:486)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:411)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:338)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:168)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1244)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1027)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:624)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:956)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:625)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+18:12:28,550 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [brabus]
+18:12:28,556 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [1]
+18:12:28,556 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:12:28,557 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [brabus]
+18:12:28,557 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Nick]
+18:12:28,557 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [30091982]
+18:12:28,576 ERROR SelectTag:87 - could not initialize proxy - no Session
+org.hibernate.LazyInitializationException: could not initialize proxy - no Session
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:165)
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:286)
+	at org.hibernate.proxy.pojo.javassist.JavassistLazyInitializer.invoke(JavassistLazyInitializer.java:185)
+	at com.barban.springmvc.model.Language_$$_jvst975_0.toString(Language_$$_jvst975_0.java)
+	at java.beans.PropertyEditorSupport.getAsText(PropertyEditorSupport.java:166)
+	at org.springframework.validation.AbstractPropertyBindingResult.formatFieldValue(AbstractPropertyBindingResult.java:113)
+	at org.springframework.validation.AbstractBindingResult.getFieldValue(AbstractBindingResult.java:232)
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:120)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getBindStatus(AbstractDataBoundFormElementTag.java:168)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getPropertyPath(AbstractDataBoundFormElementTag.java:188)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getName(AbstractDataBoundFormElementTag.java:154)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.autogenerateId(AbstractDataBoundFormElementTag.java:141)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.resolveId(AbstractDataBoundFormElementTag.java:132)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.writeDefaultAttributes(AbstractDataBoundFormElementTag.java:116)
+	at org.springframework.web.servlet.tags.form.AbstractHtmlElementTag.writeDefaultAttributes(AbstractHtmlElementTag.java:422)
+	at org.springframework.web.servlet.tags.form.SelectTag.writeTagContent(SelectTag.java:194)
+	at org.springframework.web.servlet.tags.form.AbstractFormTag.doStartTagInternal(AbstractFormTag.java:84)
+	at org.springframework.web.servlet.tags.RequestContextAwareTag.doStartTag(RequestContextAwareTag.java:80)
+	at org.apache.jsp.WEB_002dINF.views.registration_jsp._jspx_meth_form_005fselect_005f0(registration_jsp.java:441)
+	at org.apache.jsp.WEB_002dINF.views.registration_jsp._jspService(registration_jsp.java:254)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:439)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:395)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:339)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:748)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:486)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:411)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:338)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:168)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1244)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1027)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:624)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:956)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:625)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+18:12:50,916 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [1]
+18:12:50,917 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [1]
+18:12:50,917 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:12:50,917 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [brabus]
+18:12:50,918 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Nick]
+18:12:50,918 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [30091982]
+18:12:50,919 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [english]
+18:12:50,919 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [1]
+18:12:50,929 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [1]
+18:12:50,929 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [2]
+18:12:50,930 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [1]
+18:12:50,930 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:12:50,930 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [kiss]
+18:12:50,931 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Cate]
+18:12:50,931 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [30031981]
+18:12:50,931 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [1]
+18:12:50,932 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [2]
+18:12:50,932 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [3]
+18:12:50,932 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [1]
+18:12:50,933 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:12:50,933 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [gosha]
+18:12:50,933 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Igor]
+18:12:50,933 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [27012001]
+18:12:50,934 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [1]
+18:12:50,934 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [3]
+18:12:50,934 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [4]
+18:12:50,935 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [1]
+18:12:50,935 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:12:50,935 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [masyanya]
+18:12:50,935 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Masha]
+18:12:50,936 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [1111]
+18:12:50,936 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [1]
+18:12:50,936 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [4]
+18:12:50,940 TRACE BasicExtractor:68 - extracted value ([id1_1_0_] : [INTEGER]) - [null]
+18:12:50,940 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [2]
+18:12:50,941 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [russian]
+18:12:50,941 TRACE BasicExtractor:68 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [null]
+18:12:50,941 TRACE BasicExtractor:68 - extracted value ([id1_1_0_] : [INTEGER]) - [null]
+18:12:50,942 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [3]
+18:12:50,942 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [deutch]
+18:12:50,942 TRACE BasicExtractor:68 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [null]
+18:12:50,943 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [6]
+18:12:50,943 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [4]
+18:12:50,943 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [4]
+18:12:50,944 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [hryts]
+18:12:50,944 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Anton]
+18:12:50,944 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [4444]
+18:12:50,945 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [italian]
+18:12:50,945 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [4]
+18:12:50,945 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [6]
+18:12:50,946 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [5]
+18:12:50,946 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [5]
+18:12:50,946 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [5]
+18:12:50,946 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [gorbach]
+18:12:50,947 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Misha]
+18:12:50,947 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [2222]
+18:12:50,947 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [french]
+18:12:50,948 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [5]
+18:12:50,948 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [5]
+18:12:50,948 TRACE BasicExtractor:68 - extracted value ([id1_1_0_] : [INTEGER]) - [null]
+18:12:50,949 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [6]
+18:12:50,949 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [spanish]
+18:12:50,949 TRACE BasicExtractor:68 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [null]
+18:12:50,950 TRACE BasicExtractor:68 - extracted value ([id1_1_0_] : [INTEGER]) - [null]
+18:12:50,950 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [7]
+18:12:50,950 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [ukrainian]
+18:12:50,951 TRACE BasicExtractor:68 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [null]
+18:12:50,969  INFO AppController:69 - list of languages: 10
+18:13:13,227 TRACE BasicBinder:81 - binding parameter [1] as [INTEGER] - [7]
+18:13:13,235 TRACE BasicExtractor:68 - extracted value ([id1_1_2_] : [INTEGER]) - [null]
+18:13:13,236 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_0_] : [VARCHAR]) - [ukrainian]
+18:13:13,237 TRACE BasicExtractor:68 - extracted value ([id_lang5_0_1_] : [INTEGER]) - [null]
+18:13:13,343 TRACE BasicBinder:81 - binding parameter [1] as [INTEGER] - [7]
+18:13:13,344 TRACE BasicBinder:81 - binding parameter [2] as [VARCHAR] - [kola]
+18:13:13,344 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Mike]
+18:13:13,344 TRACE BasicBinder:81 - binding parameter [4] as [VARCHAR] - [5555]
+18:13:13,517  INFO AppController:94 - Language for user: UKRAINIAN
+18:13:13,518  INFO AppController:96 - Add new user: User [id=7, name=Mike, login=kola, password=5555]
+18:13:18,249 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [1]
+18:13:18,249 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:13:18,250 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [brabus]
+18:13:18,252 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Nick]
+18:13:18,253 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [30091982]
+18:13:18,253 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [2]
+18:13:18,254 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:13:18,255 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [kiss]
+18:13:18,255 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Cate]
+18:13:18,259 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [30031981]
+18:13:18,259 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [3]
+18:13:18,260 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:13:18,260 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [gosha]
+18:13:18,260 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Igor]
+18:13:18,261 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [27012001]
+18:13:18,262 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [4]
+18:13:18,265 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+18:13:18,265 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [masyanya]
+18:13:18,265 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Masha]
+18:13:18,266 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [1111]
+18:13:18,267 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [5]
+18:13:18,270 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [5]
+18:13:18,271 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [gorbach]
+18:13:18,271 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Misha]
+18:13:18,271 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [2222]
+18:13:18,272 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [6]
+18:13:18,272 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [4]
+18:13:18,272 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [hryts]
+18:13:18,273 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Anton]
+18:13:18,273 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [4444]
+18:13:18,273 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [7]
+18:13:18,274 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [7]
+18:13:18,274 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [kola]
+18:13:18,274 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Mike]
+18:13:18,274 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [5555]
+18:13:18,277  INFO AppController:62 - list of users: 7
+18:13:24,626 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [kola]
+18:13:24,628 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [7]
+18:13:24,628 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [7]
+18:13:24,629 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [kola]
+18:13:24,629 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Mike]
+18:13:24,629 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [5555]
+18:13:24,637 ERROR SelectTag:87 - could not initialize proxy - no Session
+org.hibernate.LazyInitializationException: could not initialize proxy - no Session
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:165)
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:286)
+	at org.hibernate.proxy.pojo.javassist.JavassistLazyInitializer.invoke(JavassistLazyInitializer.java:185)
+	at com.barban.springmvc.model.Language_$$_jvst975_0.toString(Language_$$_jvst975_0.java)
+	at java.beans.PropertyEditorSupport.getAsText(PropertyEditorSupport.java:166)
+	at org.springframework.validation.AbstractPropertyBindingResult.formatFieldValue(AbstractPropertyBindingResult.java:113)
+	at org.springframework.validation.AbstractBindingResult.getFieldValue(AbstractBindingResult.java:232)
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:120)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getBindStatus(AbstractDataBoundFormElementTag.java:168)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getPropertyPath(AbstractDataBoundFormElementTag.java:188)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getName(AbstractDataBoundFormElementTag.java:154)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.autogenerateId(AbstractDataBoundFormElementTag.java:141)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.resolveId(AbstractDataBoundFormElementTag.java:132)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.writeDefaultAttributes(AbstractDataBoundFormElementTag.java:116)
+	at org.springframework.web.servlet.tags.form.AbstractHtmlElementTag.writeDefaultAttributes(AbstractHtmlElementTag.java:422)
+	at org.springframework.web.servlet.tags.form.SelectTag.writeTagContent(SelectTag.java:194)
+	at org.springframework.web.servlet.tags.form.AbstractFormTag.doStartTagInternal(AbstractFormTag.java:84)
+	at org.springframework.web.servlet.tags.RequestContextAwareTag.doStartTag(RequestContextAwareTag.java:80)
+	at org.apache.jsp.WEB_002dINF.views.registration_jsp._jspx_meth_form_005fselect_005f0(registration_jsp.java:441)
+	at org.apache.jsp.WEB_002dINF.views.registration_jsp._jspService(registration_jsp.java:254)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:439)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:395)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:339)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:748)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:486)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:411)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:338)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:168)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1244)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1027)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:624)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:956)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:625)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+20:42:02,304 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [kola]
+20:42:02,327 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [7]
+20:42:02,328 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [7]
+20:42:02,328 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [kola]
+20:42:02,329 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Mike]
+20:42:02,329 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [5555]
+20:42:02,336 ERROR SelectTag:87 - could not initialize proxy - no Session
+org.hibernate.LazyInitializationException: could not initialize proxy - no Session
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:165)
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:286)
+	at org.hibernate.proxy.pojo.javassist.JavassistLazyInitializer.invoke(JavassistLazyInitializer.java:185)
+	at com.barban.springmvc.model.Language_$$_jvst975_0.toString(Language_$$_jvst975_0.java)
+	at java.beans.PropertyEditorSupport.getAsText(PropertyEditorSupport.java:166)
+	at org.springframework.validation.AbstractPropertyBindingResult.formatFieldValue(AbstractPropertyBindingResult.java:113)
+	at org.springframework.validation.AbstractBindingResult.getFieldValue(AbstractBindingResult.java:232)
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:120)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getBindStatus(AbstractDataBoundFormElementTag.java:168)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getPropertyPath(AbstractDataBoundFormElementTag.java:188)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getName(AbstractDataBoundFormElementTag.java:154)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.autogenerateId(AbstractDataBoundFormElementTag.java:141)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.resolveId(AbstractDataBoundFormElementTag.java:132)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.writeDefaultAttributes(AbstractDataBoundFormElementTag.java:116)
+	at org.springframework.web.servlet.tags.form.AbstractHtmlElementTag.writeDefaultAttributes(AbstractHtmlElementTag.java:422)
+	at org.springframework.web.servlet.tags.form.SelectTag.writeTagContent(SelectTag.java:194)
+	at org.springframework.web.servlet.tags.form.AbstractFormTag.doStartTagInternal(AbstractFormTag.java:84)
+	at org.springframework.web.servlet.tags.RequestContextAwareTag.doStartTag(RequestContextAwareTag.java:80)
+	at org.apache.jsp.WEB_002dINF.views.registration_jsp._jspx_meth_form_005fselect_005f0(registration_jsp.java:441)
+	at org.apache.jsp.WEB_002dINF.views.registration_jsp._jspService(registration_jsp.java:254)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:439)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:395)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:339)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:748)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:486)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:411)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:338)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:168)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1244)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1027)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:624)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:956)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:625)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+20:42:21,848 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [1]
+20:42:21,849 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+20:42:21,849 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [brabus]
+20:42:21,850 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Nick]
+20:42:21,850 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [30091982]
+20:42:21,850 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [2]
+20:42:21,851 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+20:42:21,851 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [kiss]
+20:42:21,851 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Cate]
+20:42:21,851 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [30031981]
+20:42:21,852 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [3]
+20:42:21,852 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+20:42:21,852 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [gosha]
+20:42:21,853 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Igor]
+20:42:21,853 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [27012001]
+20:42:21,853 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [4]
+20:42:21,854 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+20:42:21,854 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [masyanya]
+20:42:21,855 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Masha]
+20:42:21,855 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [1111]
+20:42:21,857 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [5]
+20:42:21,857 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [5]
+20:42:21,857 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [gorbach]
+20:42:21,860 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Misha]
+20:42:21,860 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [2222]
+20:42:21,860 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [6]
+20:42:21,861 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [4]
+20:42:21,861 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [hryts]
+20:42:21,861 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Anton]
+20:42:21,862 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [4444]
+20:42:21,862 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [7]
+20:42:21,863 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [7]
+20:42:21,864 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [kola]
+20:42:21,864 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Mike]
+20:42:21,864 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [5555]
+20:42:21,873  INFO AppController:62 - list of users: 7
+20:45:54,246 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [1]
+20:45:54,247 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [1]
+20:45:54,247 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+20:45:54,247 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [brabus]
+20:45:54,248 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Nick]
+20:45:54,248 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [30091982]
+20:45:54,248 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [english]
+20:45:54,249 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [1]
+20:45:54,249 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [1]
+20:45:54,249 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [2]
+20:45:54,251 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [1]
+20:45:54,252 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+20:45:54,252 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [kiss]
+20:45:54,252 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Cate]
+20:45:54,253 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [30031981]
+20:45:54,253 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [1]
+20:45:54,253 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [2]
+20:45:54,253 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [3]
+20:45:54,254 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [1]
+20:45:54,254 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+20:45:54,254 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [gosha]
+20:45:54,254 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Igor]
+20:45:54,255 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [27012001]
+20:45:54,255 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [1]
+20:45:54,255 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [3]
+20:45:54,256 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [4]
+20:45:54,256 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [1]
+20:45:54,256 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [1]
+20:45:54,256 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [masyanya]
+20:45:54,257 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Masha]
+20:45:54,257 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [1111]
+20:45:54,257 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [1]
+20:45:54,257 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [4]
+20:45:54,258 TRACE BasicExtractor:68 - extracted value ([id1_1_0_] : [INTEGER]) - [null]
+20:45:54,258 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [2]
+20:45:54,258 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [russian]
+20:45:54,259 TRACE BasicExtractor:68 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [null]
+20:45:54,259 TRACE BasicExtractor:68 - extracted value ([id1_1_0_] : [INTEGER]) - [null]
+20:45:54,259 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [3]
+20:45:54,260 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [deutch]
+20:45:54,260 TRACE BasicExtractor:68 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [null]
+20:45:54,260 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [6]
+20:45:54,260 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [4]
+20:45:54,261 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [4]
+20:45:54,261 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [hryts]
+20:45:54,261 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Anton]
+20:45:54,262 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [4444]
+20:45:54,262 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [italian]
+20:45:54,262 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [4]
+20:45:54,263 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [6]
+20:45:54,263 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [5]
+20:45:54,263 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [5]
+20:45:54,263 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [5]
+20:45:54,264 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [gorbach]
+20:45:54,264 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Misha]
+20:45:54,264 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [2222]
+20:45:54,265 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [french]
+20:45:54,265 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [5]
+20:45:54,266 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [5]
+20:45:54,266 TRACE BasicExtractor:68 - extracted value ([id1_1_0_] : [INTEGER]) - [null]
+20:45:54,266 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [6]
+20:45:54,267 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [spanish]
+20:45:54,267 TRACE BasicExtractor:68 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [null]
+20:45:54,267 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [7]
+20:45:54,267 TRACE BasicExtractor:78 - extracted value ([id_lang1_0_1_] : [INTEGER]) - [7]
+20:45:54,268 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [7]
+20:45:54,268 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [kola]
+20:45:54,268 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Mike]
+20:45:54,268 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [5555]
+20:45:54,269 TRACE BasicExtractor:78 - extracted value ([lang_nam2_0_1_] : [VARCHAR]) - [ukrainian]
+20:45:54,270 TRACE BasicExtractor:78 - extracted value ([id_lang5_0_3_] : [INTEGER]) - [7]
+20:45:54,270 TRACE BasicExtractor:78 - extracted value ([id1_1_3_] : [INTEGER]) - [7]
+20:45:54,274  INFO AppController:69 - list of languages: 10
+20:45:58,721 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [kola]
+20:45:58,722 TRACE BasicExtractor:78 - extracted value ([id1_1_0_] : [INTEGER]) - [7]
+20:45:58,723 TRACE BasicExtractor:78 - extracted value ([id_lang5_1_0_] : [INTEGER]) - [7]
+20:45:58,723 TRACE BasicExtractor:78 - extracted value ([login2_1_0_] : [VARCHAR]) - [kola]
+20:45:58,723 TRACE BasicExtractor:78 - extracted value ([user_nam3_1_0_] : [VARCHAR]) - [Mike]
+20:45:58,724 TRACE BasicExtractor:78 - extracted value ([password4_1_0_] : [VARCHAR]) - [5555]
+20:45:58,736 ERROR SelectTag:87 - could not initialize proxy - no Session
+org.hibernate.LazyInitializationException: could not initialize proxy - no Session
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:165)
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:286)
+	at org.hibernate.proxy.pojo.javassist.JavassistLazyInitializer.invoke(JavassistLazyInitializer.java:185)
+	at com.barban.springmvc.model.Language_$$_jvst975_0.toString(Language_$$_jvst975_0.java)
+	at java.beans.PropertyEditorSupport.getAsText(PropertyEditorSupport.java:166)
+	at org.springframework.validation.AbstractPropertyBindingResult.formatFieldValue(AbstractPropertyBindingResult.java:113)
+	at org.springframework.validation.AbstractBindingResult.getFieldValue(AbstractBindingResult.java:232)
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:120)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getBindStatus(AbstractDataBoundFormElementTag.java:168)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getPropertyPath(AbstractDataBoundFormElementTag.java:188)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.getName(AbstractDataBoundFormElementTag.java:154)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.autogenerateId(AbstractDataBoundFormElementTag.java:141)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.resolveId(AbstractDataBoundFormElementTag.java:132)
+	at org.springframework.web.servlet.tags.form.AbstractDataBoundFormElementTag.writeDefaultAttributes(AbstractDataBoundFormElementTag.java:116)
+	at org.springframework.web.servlet.tags.form.AbstractHtmlElementTag.writeDefaultAttributes(AbstractHtmlElementTag.java:422)
+	at org.springframework.web.servlet.tags.form.SelectTag.writeTagContent(SelectTag.java:194)
+	at org.springframework.web.servlet.tags.form.AbstractFormTag.doStartTagInternal(AbstractFormTag.java:84)
+	at org.springframework.web.servlet.tags.RequestContextAwareTag.doStartTag(RequestContextAwareTag.java:80)
+	at org.apache.jsp.WEB_002dINF.views.registration_jsp._jspx_meth_form_005fselect_005f0(registration_jsp.java:441)
+	at org.apache.jsp.WEB_002dINF.views.registration_jsp._jspService(registration_jsp.java:254)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:439)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:395)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:339)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:748)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:486)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:411)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:338)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:168)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1244)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1027)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:624)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:956)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:625)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)

@@ -43,8 +43,8 @@
 			</tr>
 			<tr>
 				<td><label for="language">Select language: </label></td>
-				<td><form:select path="language" items="${languages}">
-				
+				<td><form:select path="language" >
+					<form:options items="${languages}" itemLabel="name" itemValue="id"/>
 					</form:select></td>
 			</tr>
 

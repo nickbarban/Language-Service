@@ -28,9 +28,9 @@ tr:first-child {
 		<c:forEach items="${users}" var="user">
 			<tr>
 				<td>${user.name}</td>
-				<td>${user.login}</td>
-				<td>${user.password}</td>
 				<td><a href="<c:url value='/edit-${user.login}-user' />">${user.login}</a></td>
+				<td>${user.password}</td>
+				<%-- <td>${user.language}</td> --%>
 				<td><a href="<c:url value='/delete-${user.login}-user' />">delete</a></td>
 			</tr>
 		</c:forEach>

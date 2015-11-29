@@ -30,7 +30,7 @@ public class Language {
 	@Column(name = "lang_name", unique = true, nullable = false)
 	private String name;
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "language")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "language")
 	private Set<User> users = new HashSet<>();
 
 	public int getId() {
