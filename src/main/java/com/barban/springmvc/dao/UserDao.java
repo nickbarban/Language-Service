@@ -15,4 +15,6 @@ public interface UserDao {
 	List<User> findAllUsers();
 
 	User findUserByLogin(String login);
+
+	List<User> findUsersByLanguage(int id);
 }

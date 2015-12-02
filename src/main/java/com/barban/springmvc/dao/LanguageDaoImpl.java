@@ -3,9 +3,12 @@ package com.barban.springmvc.dao;
 import java.util.List;
 
 import org.hibernate.Criteria;
+import org.hibernate.Hibernate;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.barban.springmvc.model.Language;
 
@@ -42,6 +45,13 @@ public class LanguageDaoImpl extends AbstractDao<Integer, Language> implements L
 		Criteria criteria = createEntityCriteria();
 		criteria.add(Restrictions.eq("name", name));
 		return (Language) criteria.uniqueResult();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Language> findAllLanguagesAlt() {
+		Query query = getSession().createQuery("FROM Language");
+		return query.list();
 	}
 
 }

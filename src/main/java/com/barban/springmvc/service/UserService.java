@@ -1,6 +1,7 @@
 package com.barban.springmvc.service;
 
 import java.util.List;
+import java.util.Set;
 
 import com.barban.springmvc.model.User;
 
@@ -19,4 +20,6 @@ public interface UserService {
 	User findUserByLogin(String login);
 
 	boolean isUserLoginUnique(Integer id, String login);
+
+	Set<User> findUsersByLanguage(int id);
 }

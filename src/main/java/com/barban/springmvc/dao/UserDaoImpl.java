@@ -41,8 +41,16 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao {
 	@Override
 	public User findUserByLogin(String login) {
 		Criteria criteria = createEntityCriteria();
-        criteria.add(Restrictions.eq("login", login));
+		criteria.add(Restrictions.eq("login", login));
 		return (User) criteria.uniqueResult();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<User> findUsersByLanguage(int id) {
+		Query query = getSession().createQuery("FROM User WHERE id_lang = :id");
+		query.setParameter("id", id);
+		return query.list();
 	}
 
 }

@@ -1,6 +1,8 @@
 package com.barban.springmvc.service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -64,6 +66,11 @@ public class UserServiceImpl implements UserService {
 	public boolean isUserLoginUnique(Integer id, String login) {
 		User user = findUserByLogin(login);
 		return (user == null || ((id != null) && (user.getId() == id)));
+	}
+
+	@Override
+	public Set<User> findUsersByLanguage(int id) {
+		return new HashSet<>(dao.findUsersByLanguage(id));
 	}
 
 }

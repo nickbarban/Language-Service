@@ -1,48 +1,19 @@
-package com.barban.springmvc.model;
+package com.barban.springmvc.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.NotEmpty;
+import com.barban.springmvc.model.Language;
 
 /**
  * @author nick
  *
  */
-@Entity
-@Table(name = "user")
-public class User {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UserDTO {
+
 	private int id;
-
-	@NotEmpty
-	@Size(min = 3, max = 20)
-	@Column(name = "user_name", nullable = false)
 	private String name;
-
-	@NotEmpty
-	@Size(min = 3, max = 20)
-	@Column(name = "login", unique = true, nullable = false)
 	private String login;
-
-	@NotEmpty
-	@Size(min = 3, max = 20)
-	@Column(name = "password", nullable = false)
 	private String password;
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_lang", nullable = false)
-	private Language language;
+	private LanguageDTO language;
 
 	public int getId() {
 		return id;
@@ -76,11 +47,11 @@ public class User {
 		this.password = password;
 	}
 
-	public Language getLanguage() {
+	public LanguageDTO getLanguage() {
 		return language;
 	}
 
-	public void setLanguage(Language language) {
+	public void setLanguage(LanguageDTO language) {
 		this.language = language;
 	}
 
@@ -101,7 +72,7 @@ public class User {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		User other = (User) obj;
+		UserDTO other = (UserDTO) obj;
 		if (id != other.id)
 			return false;
 		if (login == null) {
@@ -117,7 +88,7 @@ public class User {
 		return "User [id=" + id + ", name=" + name + ", login=" + login + ", password=" + password + "]";
 	}
 
-	public User() {
+	public UserDTO() {
 		// TODO Auto-generated constructor stub
 	}
 

@@ -1,8 +1,10 @@
 package com.barban.springmvc.service;
 
 import java.util.List;
+import java.util.Set;
 
 import com.barban.springmvc.model.Language;
+import com.barban.springmvc.model.User;
 
 public interface LanguageService {
 
@@ -19,5 +21,7 @@ public interface LanguageService {
 	Language findLanguageByName(String name);
 
 	boolean isLanguageNameUnique(Integer id, String name);
+
+	public Set<User> getAllUsersByLanguage(int languageId);
 
 }

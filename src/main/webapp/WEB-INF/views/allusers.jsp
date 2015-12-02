@@ -30,7 +30,7 @@ tr:first-child {
 				<td>${user.name}</td>
 				<td><a href="<c:url value='/edit-${user.login}-user' />">${user.login}</a></td>
 				<td>${user.password}</td>
-				<%-- <td>${user.language}</td> --%>
+				<td>${user.language}</td>
 				<td><a href="<c:url value='/delete-${user.login}-user' />">delete</a></td>
 			</tr>
 		</c:forEach>

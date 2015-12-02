@@ -15,4 +15,8 @@ public interface LanguageDao {
 	List<Language> findAllLanguages();
 
 	Language findLanguageByName(String name);
+
+	List<Language> findAllLanguagesAlt();
+
+	
 }
