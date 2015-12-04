@@ -6,4 +6,5 @@ target
 .settings
 .classpath
 deploy.*
-log
+log.*
+
