@@ -1,13 +1,12 @@
 package com.barban.springmvc.controller;
 
 import java.beans.PropertyEditorSupport;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
+import javax.transaction.Transactional;
 import javax.validation.Valid;
 
+import org.hibernate.Hibernate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +20,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.barban.springmvc.dto.LanguageDTO;
-import com.barban.springmvc.dto.UserDTO;
 import com.barban.springmvc.model.Language;
 import com.barban.springmvc.model.User;
 import com.barban.springmvc.service.LanguageService;
@@ -43,45 +40,15 @@ public class AppController {
 	@Autowired
 	MessageSource messageSource;
 
-	/*
-	 * This method will list all existing users.
-	 */
-
+	@Transactional
 	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
 	public String listUsers(ModelMap model) {
 		List<Language> languages = languageService.findAllLanguages();
 		LOG.info(String.format("size of languages: %s", languages.size()));
-		LOG.info(String.format("list of languages: %s", languages));
-		List<LanguageDTO> languagesDTO = new ArrayList<>();
-		languages.stream().forEach(l -> {
-			LOG.info(String.format("Language from findAllLanguages: %s", l.toString()));
-			LanguageDTO languageDTO = new LanguageDTO();
-			languageDTO.setId(l.getId());
-			languageDTO.setName(l.getName());
-			languageDTO.setUsers(userService.findUsersByLanguage(l.getId()));
-			languagesDTO.add(languageDTO);
-		});
-		LOG.info(String.format("size of languagesDTO: %s", languagesDTO.size()));
-		LOG.info(String.format("list of languagesDTO: %s", languagesDTO));
+		languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));
 		List<User> users = userService.findAllUsers();
 		LOG.info(String.format("size of users: %s", users.size()));
-		LOG.info(String.format("list of users: %s", users));
-		List<UserDTO> usersDTO = users.stream().map(new Function<User, UserDTO>() {
-
-			@Override
-			public UserDTO apply(User u) {
-				UserDTO userDTO = new UserDTO();
-				userDTO.setId(u.getId());
-				userDTO.setName(u.getName());
-				userDTO.setLogin(u.getLogin());
-				userDTO.setPassword(u.getPassword());
-				userDTO.setLanguage(languagesDTO.stream().filter(l -> l.containsUser(u.getLogin())).findAny().get());
-				return userDTO;
-			}
-		}).collect(Collectors.toList());
-		model.addAttribute("users", usersDTO);
-		LOG.info(String.format("size of usersDTO: %s", usersDTO.size()));
-		LOG.info(String.format("list of usersDTO: %s", usersDTO));
+		model.addAttribute("users", users);
 
 		return "allusers";
 	}
@@ -97,22 +64,17 @@ public class AppController {
 		return "registration";
 	}
 
+	@Transactional
 	@RequestMapping(value = { "/new" }, method = RequestMethod.POST)
 	public String saveUser(@Valid User user, BindingResult result, ModelMap model) {
 		if (result.hasErrors()) {
+			List<Language> languages = languageService.findAllLanguages();
+			LOG.info(String.format("size of languages: %s", languages.size()));
+			languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));
+			model.addAttribute("languages", languages);
 			LOG.info(String.format("Add user has errors %s", result.getAllErrors()));
 			return "registration";
 		}
-
-		/*
-		 * if (!userService.isUserLoginUnique(user.getId(), user.getLogin())) {
-		 * FieldError loginError = new FieldError("user", "login",
-		 * messageSource.getMessage("non.unique.login", new String[] {
-		 * user.getLogin() }, Locale.getDefault()));
-		 * result.addError(loginError); return "registration"; }
-		 */
-
-		// user.setLanguage(languageService.findById(1));
 
 		userService.saveUser(user);
 		LOG.info(String.format("Language for user: %s", user.getLanguage()));
@@ -121,45 +83,39 @@ public class AppController {
 		return "success";
 	}
 
-	/*
-	 * This method will provide the medium to update an existing user.
-	 */
+	@Transactional
 	@RequestMapping(value = { "/edit-{login}-user" }, method = RequestMethod.GET)
 	public String editUser(@PathVariable String login, ModelMap model) {
+		List<Language> languages = languageService.findAllLanguages();
+		LOG.info(String.format("size of languages: %s", languages.size()));
+		languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));
+		model.addAttribute("languages", languages);
 		User user = userService.findUserByLogin(login);
 		model.addAttribute("user", user);
 		model.addAttribute("edit", true);
 		return "registration";
 	}
 
-	/*
-	 * This method will be called on form submission, handling POST request for
-	 * updating user in database. It also validates the user's input
-	 */
+	@Transactional
 	@RequestMapping(value = { "/edit-{login}-user" }, method = RequestMethod.POST)
 	public String updateUser(@Valid User user, BindingResult result, ModelMap model, @PathVariable String login) {
 
 		if (result.hasErrors()) {
+			LOG.info(String.format("ERROR edit-%s-user: %s", user.getLogin(), result.getAllErrors()));
+			List<Language> languages = languageService.findAllLanguages();
+			LOG.info(String.format("size of languages: %s", languages.size()));
+			languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));
+			model.addAttribute("languages", languages);
+			model.addAttribute("edit", true);
 			return "registration";
 		}
-
-		/*
-		 * if (!userService.isUserLoginUnique(user.getId(), user.getLogin())) {
-		 * FieldError loginError = new FieldError("user", "login",
-		 * messageSource.getMessage("non.unique.login", new String[] {
-		 * user.getLogin() }, Locale.getDefault()));
-		 * result.addError(loginError); return "registration"; }
-		 */
-
+		LOG.info(String.format("Edit-%s-user with language: %s", user.getLogin(), user.getLanguage().getName()));
 		userService.updateUser(user);
 
 		model.addAttribute("success", "User " + user.getName() + " updated successfully");
 		return "success";
 	}
 
-	/*
-	 * This method will delete a user by it's LOGIN value.
-	 */
 	@RequestMapping(value = { "/delete-{login}-user" }, method = RequestMethod.GET)
 	public String deleteUser(@PathVariable String login) {
 		userService.deleteUserByLogin(login);
