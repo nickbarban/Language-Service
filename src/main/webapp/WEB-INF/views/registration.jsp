@@ -41,6 +41,22 @@
 				<td><form:input path="password" id="password" /></td>
 				<td><form:errors path="password" cssClass="error" /></td>
 			</tr>
+			
+			<tr>
+				<td><label for="email">Email: </label></td>
+				<td><form:input path="email" id="email" /></td>
+				<td><form:errors path="email" cssClass="error" /></td>
+			</tr>
+			
+			<tr>
+				<td><label for="state">State: </label></td>
+				<td><form:input path="state" id="state" /></td>
+			</tr>
+			
+			<tr>
+				<td><label for="email">Profile: </label></td>
+			</tr>
+			
 			<tr>
 				<td><label for="language">Select language: </label></td>
 				<td><form:select path="language" >

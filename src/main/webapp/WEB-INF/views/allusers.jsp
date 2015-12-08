@@ -23,6 +23,9 @@ tr:first-child {
 			<td>NAME</td>
 			<td>Login</td>
 			<td>Password</td>
+			<td>Language</td>
+			<td>Email</td>
+			<td>State</td>
 			<td></td>
 		</tr>
 		<c:forEach items="${users}" var="user">
@@ -31,6 +34,8 @@ tr:first-child {
 				<td><a href="<c:url value='/edit-${user.login}-user' />">${user.login}</a></td>
 				<td>${user.password}</td>
 				<td>${user.language}</td>
+				<td>${user.email}</td>
+				<td>${user.state}</td>
 				<td><a href="<c:url value='/delete-${user.login}-user' />">delete</a></td>
 			</tr>
 		</c:forEach>

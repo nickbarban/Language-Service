@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataset>
-	<language id_lang="1" lang_name="english" />
-	<language id_lang="2" lang_name="russian" />
-	<language id_lang="3" lang_name="deutch" />
-	<language id_lang="4" lang_name="italian" />
+	<language id="1" name="english" />
+	<language id="2" name="russian" />
+	<language id="3" name="deutch" />
+	<language id="4" name="italian" />
 </dataset>
