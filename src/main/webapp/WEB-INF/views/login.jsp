@@ -48,7 +48,6 @@
 								class="btn btn-block btn-primary btn-default" value="Log in">
 						</div>
 
-
 					</form>
 				</div>
 			</div>
