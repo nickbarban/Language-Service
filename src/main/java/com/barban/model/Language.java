@@ -31,6 +31,9 @@ public class Language {
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "language")
 	private Set<User> users = new HashSet<>();
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "language")
+	private Set<Course> courses = new HashSet<>();
 
 	public int getId() {
 		return id;
@@ -54,6 +57,15 @@ public class Language {
 
 	public void setUsers(Set<User> users) {
 		this.users = users;
+	}
+
+	
+	public Set<Course> getCourses() {
+		return courses;
+	}
+
+	public void setCourses(Set<Course> courses) {
+		this.courses = courses;
 	}
 
 	@Override
