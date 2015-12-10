@@ -25,7 +25,7 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao {
 
 	@Override
 	public void deleteUserByLogin(String login) {
-		Query query = getSession().createSQLQuery("delete from user where login = :login");
+		Query query = getSession().createSQLQuery("delete from USER where login = :login");
 		query.setString("login", login);
 		query.executeUpdate();
 

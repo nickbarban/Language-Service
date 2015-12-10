@@ -25,11 +25,11 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		/*http.authorizeRequests().antMatchers("/", "/list").permitAll().antMatchers("/admin/**")
+		http.authorizeRequests().antMatchers("/", "/list").permitAll().antMatchers("/admin/**")
 				.access("hasRole('ADMIN')").antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
 				.antMatchers("/edit**").access("hasRole('ROLE_USER')").antMatchers("/delete**")
 				.access("hasRole('ROLE_ADMIN')").and().formLogin().loginPage("/login").usernameParameter("login")
-				.passwordParameter("password").and().csrf().and().exceptionHandling().accessDeniedPage("/accessDenied");*/
+				.passwordParameter("password").and().csrf().and().exceptionHandling().accessDeniedPage("/accessDenied");
 	}
 
 }

@@ -189,6 +189,7 @@ public class AppController {
 		if (principal instanceof UserDetails) {
 			return (UserDetails) principal;
 		} else {
+			LOG.info(String.format("ERROR getPrincipal: %s", principal.toString()));
 			return null;
 		}
 
