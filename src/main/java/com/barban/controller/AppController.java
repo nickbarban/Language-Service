@@ -96,18 +96,16 @@ public class AppController {
 	public String editUser(@PathVariable String login, ModelMap model) {
 		List<Language> languages = languageService.findAllLanguages();
 		LOG.info(String.format("size of languages: %s", languages.size()));
-		languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));		
+		languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));
 		User user = userService.findUserByLogin(login);
-		LOG.info(String.format("Editing user: %s", login));
-		if (getPrincipal().getUsername().equals(user.getName())
-				&& getPrincipal().getPassword().equals(user.getPassword())) {
+		if (getPrincipal().getUsername().equals(user.getLogin())) {
 			model.addAttribute("languages", languages);
 			model.addAttribute("user", user);
 			model.addAttribute("edit", true);
 			return "registration";
 		} else {
-			LOG.info(String.format("Editing user denied - wrong authentication:  login:%s; pass:%s;",
-					getPrincipal().getUsername(), getPrincipal().getPassword()));
+			LOG.info(String.format("Editing user denied - wrong authentication:  login:%s;",
+					getPrincipal().getUsername()));
 			return "accessDenied";
 		}
 	}
