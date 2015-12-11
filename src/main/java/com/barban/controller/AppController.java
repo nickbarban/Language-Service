@@ -51,9 +51,9 @@ public class AppController {
 	@Transactional
 	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
 	public String listUsers(ModelMap model) {
-		List<Language> languages = languageService.findAllLanguages();
+		List<Language> languages = languageService.findAllLanguages(User.class);
 		LOG.info(String.format("size of languages: %s", languages.size()));
-		languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));
+		//languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));
 		List<User> users = userService.findAllUsers();
 		LOG.info(String.format("size of users: %s", users.size()));
 		model.addAttribute("users", users);
@@ -77,7 +77,7 @@ public class AppController {
 		if (result.hasErrors()) {
 			List<Language> languages = languageService.findAllLanguages();
 			LOG.info(String.format("size of languages: %s", languages.size()));
-			languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));
+			//languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));
 			model.addAttribute("languages", languages);
 			LOG.info(String.format("Add user has errors %s", result.getAllErrors()));
 			return "registration";

@@ -16,7 +16,7 @@ public interface LanguageService {
 
 	void deleteLanguageByName(String name);
 
-	List<Language> findAllLanguages();
+	List<Language> findAllLanguages(Class<?>...dependencies);
 
 	Language findLanguageByName(String name);
 

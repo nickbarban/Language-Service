@@ -2,4 +2,8 @@
 <dataset>
 	<user id="1" NAME="SAMY" LOGIN="SAMYLOGIN" PASSWORD="1111" email="SAMY@SAMYLOGIN" state="Active" LANG_ID="1"/>
 	<user id="2" NAME="TOMY" LOGIN="TOMYLOGIN" PASSWORD="2222" email="TOMY@TOMYLOGIN" state="Active" LANG_ID="2"/>
+	<user id="3" NAME="KENNY" LOGIN="KENNYLOGIN" PASSWORD="3333" email="KENNY@KENNYLOGIN" state="Active" LANG_ID="2"/>
+	<user id="4" NAME="BUNNY" LOGIN="BUNNYLOGIN" PASSWORD="4444" email="BUNNY@BUNNYLOGIN" state="Active" LANG_ID="1"/>
+	<user id="5" NAME="JOHNNY" LOGIN="JOHNNYLOGIN" PASSWORD="5555" email="JOHNNY@JOHNNYLOGIN" state="Active" LANG_ID="1"/>
+	<user id="6" NAME="KELLY" LOGIN="KELLYLOGIN" PASSWORD="6666" email="KELLY@KELLYLOGIN" state="Active" LANG_ID="1"/>
 </dataset>

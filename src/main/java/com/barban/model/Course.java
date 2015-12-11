@@ -30,4 +30,10 @@ public class Course {
 	@JoinColumn(name = "lang_id", nullable = false)
 	private Language language;
 
+	@Override
+	public String toString() {
+		return "Course [name=" + name + ", language=" + language + "]";
+	}
+
+	
 }

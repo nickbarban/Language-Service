@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<course id="1" NAME="English_Grammar" LANG_ID="1"/>
+	<course id="2" NAME="Russian_Reading" LANG_ID="2"/>
+	<course id="3" NAME="English_Writing" LANG_ID="1"/>
+	<course id="4" NAME="English_Speaking" LANG_ID="1"/>
+</dataset>

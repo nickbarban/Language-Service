@@ -3,6 +3,7 @@ package com.barban.dao;
 import org.dbunit.dataset.CompositeDataSet;
 import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.xml.FlatXmlDataSet;
+import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -25,39 +26,42 @@ public class UserDaoImplTest extends EntityDaoImplTest {
 	@Override
 	protected IDataSet getDataSet() throws Exception {
 		LOG.info("Set up for logging");
+		@SuppressWarnings("deprecation")
+		
 		IDataSet[] datasets = {
-				new FlatXmlDataSet(this.getClass().getClassLoader().getResourceAsStream("Language.xml")),
-				new FlatXmlDataSet(this.getClass().getClassLoader().getResourceAsStream("User.xml")) };
+				new FlatXmlDataSetBuilder().build(this.getClass().getClassLoader().getResourceAsStream("Language.xml")),
+				new FlatXmlDataSetBuilder().build(this.getClass().getClassLoader().getResourceAsStream("User.xml"))
+				};
 		return new CompositeDataSet(datasets);
 	}
 
 	@Test
 	public void findById() {
 		Assert.assertNotNull(userDao.findById(1));
-		Assert.assertNull(userDao.findById(3));
+		Assert.assertNull(userDao.findById(8));
 	}
 
 	@Test
 	public void saveUser() {
 		userDao.saveUser(getSampleUser());
-		Assert.assertEquals(userDao.findAllUsers().size(), 3);
+		Assert.assertEquals(7, userDao.findAllUsers().size());
 	}
 
 	@Test
 	public void deleteEmployeeBySsn() {
 		userDao.deleteUserByLogin("SAMYLOGIN");
-		Assert.assertEquals(userDao.findAllUsers().size(), 1);
+		Assert.assertEquals(5, userDao.findAllUsers().size());
 	}
 
 	@Test
 	public void deleteEmployeeByInvalidSsn() {
 		userDao.deleteUserByLogin("qwerty");
-		Assert.assertEquals(userDao.findAllUsers().size(), 2);
+		Assert.assertEquals(6, userDao.findAllUsers().size());
 	}
 
 	@Test
 	public void findAllEmployees() {
-		Assert.assertEquals(userDao.findAllUsers().size(), 2);
+		Assert.assertEquals(6, userDao.findAllUsers().size());
 	}
 
 	@Test

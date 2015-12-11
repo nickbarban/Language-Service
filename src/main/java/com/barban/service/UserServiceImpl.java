@@ -1,8 +1,11 @@
 package com.barban.service;
 
+import java.lang.reflect.Field;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.function.Predicate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,6 +53,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public List<User> findAllUsers() {
 		return dao.findAllUsers();
+		
 	}
 
 	@Override

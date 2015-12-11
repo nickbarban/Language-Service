@@ -11,10 +11,9 @@ import com.barban.dao.LanguageDao;
 import com.barban.model.Language;
 import com.barban.model.User;
 
-
 @Service("languageService")
 @Transactional
-public class LanguageServiceImpl implements LanguageService {
+public class LanguageServiceImpl extends Initializator implements LanguageService {
 
 	@Autowired
 	private LanguageDao dao;
@@ -27,7 +26,6 @@ public class LanguageServiceImpl implements LanguageService {
 	@Override
 	public void saveLanguage(Language language) {
 		dao.saveLanguage(language);
-		;
 	}
 
 	@Override
@@ -45,8 +43,10 @@ public class LanguageServiceImpl implements LanguageService {
 	}
 
 	@Override
-	public List<Language> findAllLanguages() {
-		return dao.findAllLanguages();
+	public List<Language> findAllLanguages(Class<?>... dependencies) {
+		List<Language> languages = dao.findAllLanguages();
+		languages.stream().forEach(l -> initializeSets(l, dependencies));
+		return languages;
 	}
 
 	@Override
