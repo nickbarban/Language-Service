@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -30,6 +31,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.barban.model.Language;
 import com.barban.model.State;
 import com.barban.model.User;
+import com.barban.model.UserProfile;
+import com.barban.model.UserProfileType;
 import com.barban.service.LanguageService;
 import com.barban.service.UserService;
 
@@ -53,7 +56,7 @@ public class AppController {
 	public String listUsers(ModelMap model) {
 		List<Language> languages = languageService.findAllLanguages(User.class);
 		LOG.info(String.format("size of languages: %s", languages.size()));
-		//languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));
+		// languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));
 		List<User> users = userService.findAllUsers();
 		LOG.info(String.format("size of users: %s", users.size()));
 		model.addAttribute("users", users);
@@ -77,7 +80,8 @@ public class AppController {
 		if (result.hasErrors()) {
 			List<Language> languages = languageService.findAllLanguages();
 			LOG.info(String.format("size of languages: %s", languages.size()));
-			//languages.stream().forEach(l -> Hibernate.initialize(l.getUsers()));
+			// languages.stream().forEach(l ->
+			// Hibernate.initialize(l.getUsers()));
 			model.addAttribute("languages", languages);
 			LOG.info(String.format("Add user has errors %s", result.getAllErrors()));
 			return "registration";
@@ -132,6 +136,13 @@ public class AppController {
 
 	@RequestMapping(value = { "/delete-{login}-user" }, method = RequestMethod.GET)
 	public String deleteUser(@PathVariable String login) {
+		/*if (getPrincipal().getAuthorities()
+				.contains(new SimpleGrantedAuthority(UserProfileType.ADMIN.getUserProfileType()))) {
+			userService.deleteUserByLogin(login);
+			return "redirect:/list";
+		} else {
+			return "accessDenied";
+		}*/
 		userService.deleteUserByLogin(login);
 		return "redirect:/list";
 	}
@@ -194,7 +205,5 @@ public class AppController {
 		}
 
 	}
-
-	
 
 }

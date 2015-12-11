@@ -4,7 +4,7 @@ public enum UserProfileType {
 
 	USER("USER"), DBA("DBA"), ADMIN("ADMIN");
 
-	String userProfileType;
+	public String userProfileType;
 
 	private UserProfileType(String userProfileType) {
 		this.userProfileType = userProfileType;
@@ -13,4 +13,6 @@ public enum UserProfileType {
 	public String getUserProfileType() {
 		return userProfileType;
 	}
+	
+	
 }

@@ -26,6 +26,7 @@ tr:first-child {
 			<td>Language</td>
 			<td>Email</td>
 			<td>State</td>
+			<td>Role</td>
 			<td></td>
 		</tr>
 		<c:forEach items="${users}" var="user">
@@ -36,7 +37,10 @@ tr:first-child {
 				<td>${user.language}</td>
 				<td>${user.email}</td>
 				<td>${user.state}</td>
-				<td><a href="<c:url value='/delete-${user.login}-user' />">delete</a></td>
+				<td><c:forEach items="${user.userProfiles}" var="userProfile">${userProfile.type}
+					</c:forEach></td>
+				<td>
+				<a href="<c:url value='/delete-${user.login}-user' />">delete</a></td>
 			</tr>
 		</c:forEach>
 	</table>
