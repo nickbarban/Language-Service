@@ -10,7 +10,7 @@
 
 	<properties>
 		<guava.version>18.0</guava.version>
-		<springframework.version>4.2.2.RELEASE</springframework.version>
+		<springframework.version>4.2.7.RELEASE</springframework.version>
 		<springframework.security.version>4.0.3.RELEASE</springframework.security.version>
 		<hibernate.version>4.3.6.Final</hibernate.version>
 		<mysql.connector.version>5.1.31</mysql.connector.version>
